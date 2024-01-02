@@ -26,4 +26,4 @@ design
 *.sw?
 style-guide.md
 
-.env
+../backend/.env
