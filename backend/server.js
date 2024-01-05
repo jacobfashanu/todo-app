@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 // const { MongoClient, ServerApiVersion } = require('mongodb');
 const app = express();
-require('dotenv').config();
+// require('dotenv').config();
 const cookieParser = require("cookie-parser");
 const authRoute = require("./Routes/AuthRoute");
 
@@ -22,7 +22,7 @@ app.listen(port, () => {
 
 app.use(
     cors({
-      origin: ["http://localhost:4000","http://localhost:5173"],
+      origin: ["http://localhost:4000","http://localhost:5173",'file:///assets/index-z6wdSWEY.js' ,'https://frolicking-peony-d3d98e.netlify.app', 'https://bucolic-macaron-171720.netlify.app', "https://jacobftodo.netlify.app/"],
       methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
       credentials: true,
     })
