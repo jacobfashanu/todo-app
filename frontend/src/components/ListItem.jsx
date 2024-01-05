@@ -1,5 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import '../App.css';
 import PropTypes from 'prop-types';
 
 const veryDarkDesaturatedBlue = 'hsl(235, 24%, 19%)';
