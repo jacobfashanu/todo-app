@@ -3,11 +3,11 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 // const { MongoClient, ServerApiVersion } = require('mongodb');
 const app = express();
-// require('dotenv').config();
+require('dotenv').config();
 const cookieParser = require("cookie-parser");
 const authRoute = require("./Routes/AuthRoute");
 
-const port = 4000;
+// const port = 4000;
 
 
 mongoose.connect(process.env.MONGODB_URL, {
@@ -16,8 +16,8 @@ mongoose.connect(process.env.MONGODB_URL, {
   .catch((err) => console.error(err));
 
 
-app.listen(port, () => {
-    console.log(`Server is listening on port ${port}`);
+app.listen(process.env.PORT, () => {
+    console.log(`Server is listening on port ${process.env.PORT}`);
 });
 
 app.use(
