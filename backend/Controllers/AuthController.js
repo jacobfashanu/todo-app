@@ -61,7 +61,8 @@ module.exports.Login = async (req, res, next) => {
   }
 
   module.exports.userProfile = async (req, res) => {
-    const user = await User.findById(req.userId);
+    // const user = await User.findById(req.userId);
+    const user = await User.findOne({ email: 'fashanujacob@gmail.com' });
     if (user) {
       return res.json({status: true, user: user.username, userData: user.pageData });
     }
