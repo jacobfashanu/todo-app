@@ -22,7 +22,7 @@ app.listen(process.env.PORT, () => {
 
 app.use(
     cors({
-      origin: ["http://localhost:4000","http://localhost:5173",'file:///assets/index-z6wdSWEY.js' ,'https://frolicking-peony-d3d98e.netlify.app', 'https://bucolic-macaron-171720.netlify.app', "https://jacobftodo.netlify.app/"],
+      origin: ["http://localhost:4000","http://localhost:5173",'file:///assets/index-z6wdSWEY.js' ,'https://frolicking-peony-d3d98e.netlify.app', 'https://bucolic-macaron-171720.netlify.app', "https://jacobftodo.netlify.app/", "https://todo-app-1wfp.onrender.com"],
       methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
       credentials: true,
     })
