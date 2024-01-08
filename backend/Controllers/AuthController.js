@@ -52,7 +52,7 @@ module.exports.Login = async (req, res, next) => {
        res.cookie("token", token, {
          withCredentials: true,
          httpOnly: false,
-         secure: true
+        //  secure: true
         // httpOnly: true,
         //  samesite: "none"
        });
