@@ -53,7 +53,6 @@ function Index() {
       const { status, user, userData } = data;
       setUsername(user);
       setPageData(userData);
-      // console.log(userData);
       return status
         ? toast(`Hello ${user}`, {
             position: "bottom-right",
