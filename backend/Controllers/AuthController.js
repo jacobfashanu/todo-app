@@ -24,6 +24,7 @@ module.exports.Signup = async (req, res, next) => {
     res.cookie("token", token, {
       withCredentials: true,
       httpOnly: false,
+      samesite: true
     });
     res
       .status(201)
