@@ -41,10 +41,10 @@ function Index() {
   useEffect(() => {
     const verifyCookie = async () => {
       
-      // if (!cookies.token) {
+      if (!cookies.token) {
         
-      //   navigate("/login");
-      // }
+        navigate("/login");
+      }
       const { data } = await axios.post(
         import.meta.env.VITE_API_URL,
         {},
