@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
-const backendURL = "https://backend-todo-5dr0.onrender.com";
+const backendURL = "https://crabby-coveralls-bat.cyclic.app";
 // const backendURL = "http://localhost:4000";
 
 const Signup = () => {
@@ -34,7 +34,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        (backendURL+ '/signup'),
+        (import.meta.env.VITE_API_URL+ '/signup'),
         {
           ...inputValue,
         },

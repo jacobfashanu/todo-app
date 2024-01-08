@@ -8,7 +8,7 @@ import { ListItem, NewListItem, FilterItem } from '../components/ListItem';
 import bgDesktopDarkImg from '/images/bg-desktop-dark.jpg';
 import bgDesktopLightImg from '/images/bg-desktop-light.jpg'
 import Pagination from '@mui/material/Pagination';
-const backendURL = "https://backend-todo-5dr0.onrender.com";
+// const backendURL = "";
 // const backendURL = "http://localhost:4000";
 // 
 function Index() {
@@ -31,11 +31,11 @@ function Index() {
     }
     const updateData = async () => {
       await axios.patch(
-        backendURL,
+        import.meta.env.VITE_API_URL,
         {
           pageData: pageData
         },
-        { withCredentials: true }
+        { withCredentials: true, credentials: "include" }
       );
     };
     updateData();
@@ -48,7 +48,7 @@ function Index() {
         navigate("/login");
       }
       const { data } = await axios.post(
-        backendURL,
+        import.meta.env.VITE_API_URL,
         {},
         { withCredentials: true }
       );
