@@ -8,9 +8,7 @@ import { ListItem, NewListItem, FilterItem } from '../components/ListItem';
 import bgDesktopDarkImg from '/images/bg-desktop-dark.jpg';
 import bgDesktopLightImg from '/images/bg-desktop-light.jpg'
 import Pagination from '@mui/material/Pagination';
-// const backendURL = "";
-// const backendURL = "http://localhost:4000";
-// 
+
 function Index() {
   const navigate = useNavigate();
   const [cookies, removeCookie] = useCookies([]);

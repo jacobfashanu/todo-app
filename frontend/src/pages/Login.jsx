@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
-const backendURL = "https://crabby-coveralls-bat.cyclic.app";
-// const backendURL = "http://localhost:4000";
+
 
 const Login = () => {
   const navigate = useNavigate();
