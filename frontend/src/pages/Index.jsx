@@ -57,7 +57,7 @@ function Index() {
         ? toast(`Hello ${user}`, {
             position: "bottom-right",
           })
-        : (removeCookie("token", { domain: 'www.todojacobf.com' }), navigate("/login"));
+        : (removeCookie("token"), navigate("/login"));
     };
     verifyCookie();
   }, [cookies, navigate, removeCookie]);
