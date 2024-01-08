@@ -11,7 +11,7 @@ import Pagination from '@mui/material/Pagination';
 
 function Index() {
   const navigate = useNavigate();
-  const [cookies, removeCookie] = useCookies([]);
+  const [cookies, removeCookie] = useCookies(['token']);
   const [username, setUsername] = useState("");
   const [pageData, setPageData] = useState({
     pages:[{
@@ -57,7 +57,7 @@ function Index() {
         ? toast(`Hello ${user}`, {
             position: "bottom-right",
           })
-        : (removeCookie("token", { path: '/', domain: 'api.todojacobf.com'}), navigate("/login"));
+        : (removeCookie("token"), navigate("/login"));
     };
     verifyCookie();
   }, [cookies, navigate, removeCookie]);
